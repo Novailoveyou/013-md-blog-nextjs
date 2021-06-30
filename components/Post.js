@@ -9,7 +9,7 @@ const Post = ({
 }) => {
   return (
     <div className='card'>
-      <Image src={`${coverImage}`} alt={title} width={330} height={220} />
+      <Image src={coverImage} alt={title} width={330} height={220} />
 
       <div className='post-date'>Posted on {date}</div>
 
