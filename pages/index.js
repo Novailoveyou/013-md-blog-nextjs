@@ -5,7 +5,6 @@ import Head from 'next/head'
 import Post from '../components/Post'
 
 const Home = ({ posts }) => {
-  console.log(posts)
   return (
     <div>
       <Head>
@@ -43,8 +42,6 @@ export async function getStaticProps() {
       frontmatter
     }
   })
-
-  console.log(posts)
 
   return {
     props: {
