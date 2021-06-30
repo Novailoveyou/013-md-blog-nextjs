@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Head from 'next/head'
+import Post from '../components/Post'
 
 const Home = ({ posts }) => {
   console.log(posts)
@@ -11,7 +12,11 @@ const Home = ({ posts }) => {
         <title>Dev Blog</title>
       </Head>
 
-      <h2>Hello</h2>
+      <div className='posts'>
+        {posts.map((post, idx) => (
+          <Post key={idx} post={post} />
+        ))}
+      </div>
     </div>
   )
 }
