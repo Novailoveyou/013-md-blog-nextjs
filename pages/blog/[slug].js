@@ -18,7 +18,16 @@ const PostPage = ({
       <div className='card card-page'>
         <h1 className='post-title'>{title}</h1>
         <div className='post-date'>Posted on {date}</div>
-        <Image src={coverImage} alt={title} width={720} height={480} />
+        <Image
+          src={coverImage}
+          alt={title}
+          width={720}
+          height={480}
+          placeholder='blur'
+          blurDataURL={
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
+          }
+        />
         <div className='post-body'>
           <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>

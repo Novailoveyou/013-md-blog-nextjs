@@ -9,7 +9,16 @@ const Post = ({
 }) => {
   return (
     <div className='card'>
-      <Image src={coverImage} alt={title} width={330} height={220} />
+      <Image
+        src={coverImage}
+        alt={title}
+        width={330}
+        height={220}
+        placeholder='blur'
+        blurDataURL={
+          'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
+        }
+      />
 
       <div className='post-date'>Posted on {date}</div>
 
